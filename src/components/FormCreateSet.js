@@ -12,8 +12,9 @@
 //         </form> 
 //     );
 // }
-
+import './FormCreateCard'
 import './FormCreateSet.css'
+import { Link } from 'react-router-dom'
 
 export function FormCreateSet() {
 
@@ -45,7 +46,8 @@ export function FormCreateSet() {
                 Описание:
             </label>
             <textarea name={"description"}/>
-            <input type={"submit"} value={"Создать сет"}/>
+            {/* <input type={"submit"} value={"Создать сет"}/> */}
+            <Link className='btn__create btn' to="/admin/card">Cоздать сет</Link>
         </form>
-    )
+    );
 }

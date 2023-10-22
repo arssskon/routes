@@ -14,13 +14,11 @@ function App() {
       <Routes>
         <Route path="/" element={<PageSelectSet/>} />
         <Route path="/set" element={<PageViewSet/>} />
-        <Route path="/admin" element={<PageCreateSet/>} /> 
-        <Route path="*" element={<PageCreateSet/>} />
-
-        <Route path={"/create"} element={<PageCreateSet/>}>
-            <Route path={"set"} element={<FormCreateSet/>}/>
-            <Route path={"card"} element={<FormCreateCard/>}/>
+        <Route path="/admin" element={<PageCreateSet/>} > 
+            <Route path="set" element={<FormCreateSet/>}/>
+            <Route path="card" element={<FormCreateCard/>}/>
         </Route>
+        <Route path="*" element={<PageCreateSet/>} />
 
         <Route path="/set/:id" element={<PageViewSet/>} />
       </Routes>

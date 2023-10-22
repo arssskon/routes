@@ -1,22 +1,9 @@
-// export function FormCreateCard() {
-//     return (
-//         <form>
-//             <label>
-//                 Передняя сторона карточки:
-//                 <input type="text" name="fronttext" />
-//             </label>
-//             <label>
-//                  задняя сторона карточки:
-//                  <input type="text" name="backtext" />
-//             </label>
-//             <input type="submit" value="Создать карточку" />
-//         </form>
-//     )
-// }
+import './FormCreateCard.css'
+import { Link } from 'react-router-dom'
 
 export function FormCreateCard(){
     return (
-        <form>
+        <form className="form" >
             <label>
                 Передняя сторона карточки:
                 <input type={"text"} name={"fronttext"} />
@@ -25,7 +12,7 @@ export function FormCreateCard(){
                 Задняя сторона карточки:
                 <input type={"text"} name={"backtext"} />
             </label>
-            <input type={"submit"} value={"Создать карточку"} />
+            <Link className='btn__create__card btn' to="/">Cоздать карточку</Link>
         </form>
     );
 }

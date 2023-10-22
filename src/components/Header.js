@@ -10,7 +10,7 @@ export function Header() {
             <nav className="main-menu">
                 <ul>
                     <li className="li">
-                        <Link className='main-menu__link' to="/admin">Cоздать сет</Link>
+                        <Link className='main-menu__link' to="/admin/set">Cоздать сет</Link>
                     </li>
                 </ul>
             </nav>

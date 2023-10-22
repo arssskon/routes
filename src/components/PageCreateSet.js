@@ -6,7 +6,7 @@ export function PageCreateSet() {
     return <div>
         <>
             <Header />
-            <h2>Создание сета карточке</h2>
+            <h2>Создание сета карточек</h2>
             <Outlet/>
         </>
 
