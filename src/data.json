@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "front": "bike",
+        "back": "велосипед",
+        "setName": "English"
+    },
+    {
+        "id": 2,
+        "front": "car",
+        "back": "машина",
+        "setName": "English"
+    },
+    {
+        "id": 3,
+        "front": "minion",
+        "back": "миньон",
+        "setName": "English"
+    },
+    {
+        "id": 4,
+        "front": "peach",
+        "back": "персик",
+        "setName": "fruit"
+    },
+    {
+        "id": 5,
+        "front": "apple",
+        "back": "яблоко",
+        "setName": "fruit"
+    },
+    {
+        "id": 6,
+        "front": "banana",
+        "back": "банан",
+        "setName": "fruit"
+    },
+    {
+        "id": 7,
+        "front": "animation-iteration-count",
+        "back": "сколько раз проигрывать цикл анимации",
+        "setName": "Анимация"
+    },
+    {
+        "id": 8,
+        "front": "animation-direction",
+        "back": "направление движения анимации",
+        "setName": "Анимация"
+    },
+    {
+        "id": 9,
+        "front": "animation",
+        "back": "устанавливает анимацию",
+        "setName": "Анимация"
+    },
+    {
+        "id": 10,
+        "front": "font-style",
+        "back": "стилизация шрифта",
+        "setName": "Шрифт"
+    },
+    {
+        "id": 11,
+        "front": "font-size-adjust",
+        "back": "контролирует размер шрифта",
+        "setName": "Шрифт"
+    },
+    {
+        "id": 12,
+        "front": "font-family",
+        "back": "приоритетный список",
+        "setName": "Шрифт"
+    }
+
+]
