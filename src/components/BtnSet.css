@@ -1,0 +1,14 @@
+.list-set_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(77, 122, 247, 0.79);
+    border-radius: 15px;
+}
+  
+.list-set_btn{
+    text-decoration: none;
+    color: white;
+}

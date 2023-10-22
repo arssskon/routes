@@ -33,7 +33,7 @@ export function Set() {
 
 
                 <div className="counter">
-                    {step + 1}/12
+                    {step + 1}/3
                 </div>
 
 

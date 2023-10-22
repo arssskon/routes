@@ -22,7 +22,7 @@ import { Link } from "react-router-dom";
             sets: [],
         }
     ).sets.map((item,index)=>( //перебор названий
-        <BtnSet key={index} name={item} id={index}/> //создание кнопок
+    <BtnSet key={index} name={item} id={item}/> //создание кнопок
         
     ));
 

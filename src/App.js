@@ -13,6 +13,8 @@ function App() {
         <Route path="/set" element={<PageViewSet/>} />
         <Route path="/admim" element={<PageCreateSet/>} />
         <Route path="*" element={<PageCreateSet/>} />
+
+        <Route path="/set/:id" element={<PageViewSet/>} />
       </Routes>
     </BrowserRouter>
   );
