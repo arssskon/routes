@@ -1,38 +1,180 @@
-.App {
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.card {
+  text-align: center;
+  border-radius: 15px;
+    margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
+  max-width: 300px;
+  min-height: 300px;
+  margin: 20 auto;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: lavenderblush;
+  border: solid 1px gray;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform-style: preserve-3d ;
 }
 
-.App-link {
-  color: #61dafb;
+.control {
+  text-align: center;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-check {
+  transform: rotateX(180deg);
+}
+
+.card::after {
+  content: attr(data-back);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lemonchiffon;
+  border: solid 1px gray;
+  border-radius: 15px;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+}
+/* 
+заметки {
+  inset задаёт позицию и размер элемента на странице. Это комбинация четырёх отдельных свойств: top , right , bottom и left , которые определяют отступы от верхнего, правого, нижнего и левого края элемента
+  --------------------------
+  backface-visibility определяет, показывать обратную сторону элемента или нет
+  ---------------------------------------
+  preserve-3d — элемент как бы находится в своём трёхмерном пространстве, а не в пространстве своего родителя. Это означает, что элементы будут независимы друг д.
+}*/
+
+.btns {
+  margin-top: 20px;
+  
+  display: flex;
+  justify-content: center;
+}
+
+.btn-1 {
+  text-align: center;
+  border-radius: 15px;
+  /* margin-top: 20px; */
+  
+
+  position: relative;
+  display: flex;
+  width: 50px;
+  min-height: 50px;
+  margin: 20 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 138, 177);
+  border: solid 1px rgb(66, 66, 66);
+
+  margin-right: 20px;
+}
+
+.btn-2 {
+  text-align: center;
+  border-radius: 15px;
+  /* margin-top: 20px; */
+  
+
+  position: relative;
+  display: flex;
+  width: 50px;
+  min-height: 50px;
+  margin: 20 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 138, 177);
+  border: solid 1px rgb(66, 66, 66);
+
+  margin-left: 20px;
+}
+
+.btn:hover {
+	background: rgba(0,0,0,0);
+	color: #000000;
+	box-shadow: inset 0 0 0 3px rgb(66, 66, 66);
+}
+
+.counter {
+  margin-top: 20px;
+  
+  display: flex;
+  justify-content: center;
+}
+
+/***************выбор карточек*****************************/
+
+.btn_select {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.selects {
+  text-decoration: none;
+
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  position: relative;
+  display: flex;
+  min-width: 100px;
+  min-height: 100px;
+  margin: 20 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(61, 90, 255);
+  border: solid 1px rgb(55, 0, 255);
+  cursor: pointer;
+  transition: transform 0.5s;
+  
+}
+
+.selects-decor {
+  text-decoration: none;
+  color: rgb(3, 3, 114);
 }

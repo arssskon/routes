@@ -1,0 +1,27 @@
+.header {
+    background-color: blue;
+    text-align: center;
+    height: 100px;
+    color: aliceblue;
+    display: flex;
+  
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center
+}
+
+.header__title {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.main-menu__link {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.li {
+    list-style-type: none;
+}
+

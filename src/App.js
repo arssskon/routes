@@ -12,6 +12,7 @@ function App() {
         <Route path="/" element={<PageSelectSet/>} />
         <Route path="/set" element={<PageViewSet/>} />
         <Route path="/admim" element={<PageCreateSet/>} />
+        <Route path="*" element={<PageCreateSet/>} />
       </Routes>
     </BrowserRouter>
   );
