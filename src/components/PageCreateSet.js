@@ -9,7 +9,5 @@ export function PageCreateSet() {
             <h2>Создание сета карточек</h2>
             <Outlet/>
         </>
-
-        
     </div>
 }

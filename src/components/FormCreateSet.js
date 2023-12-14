@@ -1,53 +1,79 @@
-// export function FormCreateSet() {
-//     return (
-//         <form>
-//             <label>
-//                 <input type="text" name="name" /> //нэйм👀
-//             </label>
-//             <label>
-//                 Описание:
-//                     <textarea name="discription"/>
-//             </label>
-//             <input tupe="submit" value="Создать сет" />
-//         </form> 
-//     );
-// }
-import './FormCreateCard'
+// import './FormCreateCard'
 import './FormCreateSet.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+// import { React } from "react"
+import { useState } from 'react'
+// import './PageCreateSet'
+import {useEffect} from "react";
+// import { useForm } from 'react-hook-form'
+// import { setName } from 'react-hook-form'
 
-export function FormCreateSet() {
+import './FormCreateSet.css' 
+import './UseInput'
+import React from 'react';
+import { useForm } from 'react-hook-form'
 
-    const onSubmit = async (data) => {
-        data.preventDefault()
-        console.log(data)
-        fetch("http://localhost:5000/api/set/create", {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            method: 'POST',
-            body: JSON.stringify(data)
-        })
-            .then(function (response) {
-                console.log(response)
-            })
-            .catch(function (response) {
-                console.log(response)
-            })
-    }
-    return (
-        <form className="form" onSubmit={onSubmit}>
-            <label className="label">
-                Название набора:
-            </label>
-            <input type={"text"} name={"name"}/>
-            <label className="label">
-                Описание:
-            </label>
-            <textarea name={"description"}/>
-            {/* <input type={"submit"} value={"Создать сет"}/> */}
-            <Link className='btn__create btn' to="/admin/card">Cоздать сет</Link>
-        </form>
-    );
+export function FormCreateSet() { 
+        const [count, setCount] = useState(0);
+        useEffect(() => {
+            if (count !== 0) {
+                console.log(`Отправка формы: ${count}`)
+                alert(`Отправка формы: ${count}`)
+            }
+        }, [count], );
+
+            
+
+
+    const { register, handleSubmit, formState : {errors} } = useForm({
+        defaultValues: {
+            name: "",
+            discription: ""
+        }
+    });
+    console.log(errors);
+
+    return( 
+        <div className='div__form'>
+            <form onSubmit={handleSubmit((data) => {
+                setCount(count + 1);
+                console.log(data);
+            })}>
+                <div className='form'>
+                    <label htmlFor='name'className='label__title'>
+                        Название набора:
+                    </label>
+                    <input type="text" name="name" id='name' {...register("name", 
+                    {
+                         required: "Заполните поле название набора",
+                         minLength: {
+                         value: 4,
+                         message: "Название набора должно содержать минимум 4 символа"
+                        }
+                    })}/>
+                    <p className={"errorMsg"}>{errors.name?.message}</p>
+                </div>
+
+                <div className='form'>
+                    <label htmlFor='discription' className='label__title'>
+                        Описание:
+                    </label>
+                    <textarea  name="discription" id='discription' {...register("discription", 
+                    {
+                        required: "Заполните поле Описание набора",
+                        minLength: {
+                            value: 4,
+                            message: "Описание набора должно содержать минимум 4 символа"
+                           }
+
+                    })}/>
+                    <p className={"errorMsg"}>{errors.discription?.message}</p>
+                </div>
+
+                <div className='form'>
+                    <input className="btn__create btn" type="submit" value="Создать сет"/>
+                </div>
+            </form>
+        </div>
+    ); 
 }

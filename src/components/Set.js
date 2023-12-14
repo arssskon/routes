@@ -8,15 +8,10 @@ import { useLocation, useParams } from "react-router-dom";
 export function Set() {
     const location = useLocation()
     const { set } = location.state;
-   
     const param = useParams();
     console.log(param.id)
-
-    // const cards = require('../data');}
     
     const [step, setStep] = React.useState(0);
-
-    
 
     const cards = require('../data').filter((item) => (item.setName === set));
     return (
@@ -30,13 +25,9 @@ export function Set() {
                     setStep(step - 1)
                 }}>left</button>
 
-
-
                 <div className="counter">
-                    {step + 1}/3
+                    {step + 1}/ {cards.length } 
                 </div>
-
-
 
                 <button disabled={step === cards.length - 1} className="btn-2 btn" onClick={() => {
                     if (step === cards.length - 1) return

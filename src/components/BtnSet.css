@@ -1,13 +1,3 @@
-/* .list-set__item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 100px;
-    background-color: rgba(77, 122, 247, 0.79);
-    border-radius: 15px;
-} */
-  
 .list-set__btn{
     text-decoration: none;
     color: rgb(0, 0, 0);
